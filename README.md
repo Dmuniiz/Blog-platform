@@ -1,5 +1,3 @@
-﻿# Blog-platform
-
 # Blog Platform (Java + Spring Boot)
 A secure and structured backend application for a multi-user blog platform. Built using Java 21 and Spring Boot, this project focuses on authentication, clean architecture, and well-documented code.
 
@@ -46,3 +44,4 @@ Enter the email or password according to your wish and run the application to sa
 To run the frontend navigate to frontend directory in your terminal then do these 2 steps:  <br>
 npm install (ignore the warnings) <br>
 npm run dev
+
