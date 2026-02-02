@@ -147,7 +147,7 @@ const PostList: React.FC<PostListProps> = ({
                     <Chip
                       className="bg-primary-100 text-primary"
                     >
-                      {post.category.name}
+                      {post.category?.name || "Sem categoria"}
                     </Chip>
                     {post.tags.map((tag) => (
                       <Chip

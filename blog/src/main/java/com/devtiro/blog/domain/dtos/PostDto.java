@@ -22,7 +22,7 @@ public class PostDto {
     //TODO: Author
     private AuthorDto author;
     private Set<TagDto> tags;
-    private CategoryDto categoryDto;
+    private CategoryDto category;
     private Integer readingTime;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;

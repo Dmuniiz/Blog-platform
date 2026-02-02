@@ -1,4 +1,4 @@
-package com.devtiro.blog.controllers;
+package com.devtiro.blog.exception;
 
 import com.devtiro.blog.domain.dtos.ApiErrorResponse;
 import jakarta.persistence.EntityNotFoundException;
@@ -6,15 +6,12 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.BadCredentialsException;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-@ControllerAdvice
-@RestController
 @Slf4j
-public class ErrorController {
+@RestControllerAdvice
+public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ApiErrorResponse> handleException(Exception ex){
