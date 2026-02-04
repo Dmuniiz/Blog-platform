@@ -1,6 +1,5 @@
 package com.devtiro.blog.exception;
 
-import com.devtiro.blog.domain.dtos.ApiErrorResponse;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -37,12 +36,13 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(IllegalStateException.class)
     public ResponseEntity<ApiErrorResponse> handleIllegalStateException(IllegalStateException ex){
+
         ApiErrorResponse error = ApiErrorResponse.builder()
                 .status(HttpStatus.CONFLICT.value())
                 .message(ex.getMessage())
                 .build();
 
-        return new ResponseEntity<>(error, HttpStatus.CONFLICT); //204
+        return new ResponseEntity<>(error, HttpStatus.CONFLICT);
     }
 
     @ExceptionHandler(BadCredentialsException.class)

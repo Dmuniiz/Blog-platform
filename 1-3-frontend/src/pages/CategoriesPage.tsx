@@ -94,7 +94,7 @@ const CategoriesPage: React.FC<CategoriesPageProps> = ({ isAuthenticated }) => {
       await apiService.deleteCategory(category.id);
       await fetchCategories();
     } catch (err) {
-      setError("Failed to delete category. Please try again.");
+      setError("Failed to delete category. Please try again or check for draft post with this Category.");
     } finally {
       setLoading(false);
     }
